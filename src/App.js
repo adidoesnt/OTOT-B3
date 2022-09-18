@@ -1,6 +1,6 @@
 /* eslint-disable array-callback-return */
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Card from "./components/Card";
 import Form from "./components/Form";
 import { Box } from "@mui/material";
@@ -19,6 +19,10 @@ function App() {
       })
       .catch((err) => err);
   };
+
+  useEffect(() => {
+    getAllPeople()
+  }, []);
 
   const addOnePerson = () => {
     axios
