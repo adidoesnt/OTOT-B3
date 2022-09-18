@@ -13,7 +13,7 @@ function App() {
 
   const getAllPeople = () => {
     axios
-      .get("http://localhost:8080")
+      .get("https://adidoesnt-otot-b.herokuapp.com/")
       .then((res) => {
         setPeople(res.data);
       })
@@ -22,7 +22,7 @@ function App() {
 
   const addOnePerson = () => {
     axios
-      .post("http://localhost:8080", {
+      .post("https://adidoesnt-otot-b.herokuapp.com/", {
         name: name,
         age: age,
       })
@@ -34,7 +34,7 @@ function App() {
 
   const updateOnePerson = () => {
     axios
-      .put(`http://localhost:8080/${_id}`, {
+      .put(`https://adidoesnt-otot-b.herokuapp.com/${_id}`, {
         name,
         age,
       })
@@ -46,7 +46,7 @@ function App() {
 
   const deleteOnePerson = () => {
     axios
-      .delete(`http://localhost:8080/${_id}`)
+      .delete(`https://adidoesnt-otot-b.herokuapp.com/${_id}`)
       .then((res) => {
         getAllPeople();
       })
